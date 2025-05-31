@@ -4,15 +4,17 @@
 </h1>
 <div class="personal  max-w-[80%] m-auto ">
     <div class="max-w-fit hover:p-10 rounded-xl shadow-lg p-8 fade-in-up">
-        <h1>📞 Call me: <a href="tel:8193825347">8193825347</a></h1>
-        <h1>📧 Email me: <a href="mailto:ravikaransingh124@gmail.com">ravikaransingh124@gmail.com</a></h1>
+        <h1>📞 Call me: <a class="text-blue-600 underline" href="tel:8193825347">8193825347</a></h1>
+        <h1>📧 Email me: <a class="text-blue-600 underline"
+                href="mailto:ravikaransingh124@gmail.com">ravikaransingh124@gmail.com</a></h1>
     </div>
 </div>
+<!-- form -->
 <div class="flex h-[60vh]">
-    <section id="contact" class="py-10  text-gray-800 w-1/2">
+    <section id="contact" class="py-10  text-gray-800 w-full md:w-1/2">
         <div class="max-w-4xl mx-auto px-4 w-[70%] m-auto">
 
-            <form action="https://formspree.io/f/mnnvajko" method="POST" class="grid gap-4">
+            <form id="contact-form"class="grid gap-4">
                 <input type="text" name="name" placeholder="Your Name" class="p-3 border rounded w-full" required>
                 <input type="email" name="email" placeholder="Your Email" class="p-3 border rounded w-full" required>
                 <textarea name="message" rows="5" placeholder="Your Message" class="p-3 border rounded w-full"
@@ -21,10 +23,11 @@
                     Message</button>
             </form>
         </div>
+        <p id="response"></p>
     </section>
-
-    <div class="img w-1/2 flex items-center justify-center">
-        <img class="h-[80%]  rounded-[25px] object-contain drop-shadow-2xl drop-shadow-amber-50"
-            src="./picture/ravi.png" alt="ravi">
+<!-- img -->
+    <div class="img  w-1/2 flex items-center justify-center">
+        <img id="ravi_img" src="../picture/ravi.png" class="ravi_img h-[80%]  rounded-[25px] object-contain drop-shadow-2xl drop-shadow-amber-50"
+            alt="ravi">
     </div>
 </div>

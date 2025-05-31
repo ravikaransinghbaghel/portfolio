@@ -1,35 +1,22 @@
-fetch("files/home.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("home").innerHTML = data;
+async function loadHtml(id,url) {
 
-    });
+   await fetch(`files/${url}`)
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById(`${id}`).innerHTML = data;
 
-fetch("files/about.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("about").innerHTML = data;
+        });
+}
 
-    });
 
-fetch("files/contact.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("contact").innerHTML = data;
 
-    });
+// author img 
 
-fetch("files/skill.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("skill").innerHTML = data;
+ function ravi_img() {
+     const raviImg = document.querySelectorAll('.ravi_img')
+     raviImg.forEach(item=>item.src ="../picture/ravi.png")
+     
+}
 
-    });
-fetch("files/footer.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("footer").innerHTML = data;
-
-    });
-
+ravi_img()
 

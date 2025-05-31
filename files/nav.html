@@ -1,21 +1,29 @@
-
-    <div class="nav max-w-[85%] m-auto flex  justify-between items-center h-[15vh]">
-        <div class="logo cursor-pointer h-[90%]">
-            <a href="">
-                <img class="object-cover object-center rounded-full h-full" src="../picture/logo.jpg" alt="logo">
-            </a>
-        </div>
-
-        <div class="nav_item flex gap-9 items-center">
-            <ul class="flex gap-10 text-[20px] font-[500] text-black">
-                <li class="line nav_shadew cursor-pointer hover:text-orange-600">Home</li>
-                <li onclick="scrollbtn('about')" class="line nav_shadew cursor-pointer hover:text-orange-600">About</li>
-                <li onclick="scrollbtn('skill')" class="line nav_shadew cursor-pointer hover:text-orange-600">Skill</li>
-                <li class="line nav_shadew cursor-pointer hover:text-orange-600"><a
-                        href="../Ravi_karan_resume.pdf">Resume</a></li>
-            </ul>
-
-            <button onclick="scrollbtn('contact')"
-                class="bg-white rounded-lg py-2 px-5 text-[16px] font-[600] cursor-pointer shodew hover:rounded-[25px] hover:bg-amber-700 active:scale-50">contact</button>
-        </div>
+<div class="nav w-full max-w-[85%] m-auto flex  justify-between items-center h-[12vh] md:h-[15vh]">
+    <!-- logo or manu button -->
+    <div class="flex gap-3 logo cursor-pointer h-[90%]">
+        <!-- <button class="md:hidden">
+            manu button
+            <div id="manuItems" class=" relative"></div>
+            <img class="h-1/3 object-cover" src="../picture/manu.png" alt="">
+        </button> -->
+        <!-- logo -->
+        <a href="">
+            <img class="object-cover object-center rounded-full h-full" src="../picture/logo.jpg" alt="logo">
+        </a>
     </div>
+
+    <!-- navitem -->
+    <div class="nav_item flex gap-9 items-center">
+        <ul class=" gap-10 text-[20px] font-[500] text-black flex">
+            <li class="line nav_shadew cursor-pointer hover:text-orange-600">Home</li>
+            <li onclick="scrollbtn('about')" class="line nav_shadew cursor-pointer hover:text-orange-600">About</li>
+            <li onclick="scrollbtn('skill')" class="line nav_shadew cursor-pointer hover:text-orange-600">Skill</li>
+            <li class="line nav_shadew cursor-pointer hover:text-orange-600"><a
+                    href="../Ravi_karan_resume.pdf">Resume</a></li>
+        </ul>
+
+        <button onclick="scrollbtn('contact')"
+            class="bg-white rounded-lg py-2 px-5 text-[16px] font-[600] cursor-pointer shodew hover:rounded-[25px] hover:bg-amber-700 active:scale-50">contact
+        </button>
+    </div>
+</div>

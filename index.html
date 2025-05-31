@@ -11,31 +11,31 @@
     </head>
 
     <body>
-        <div class="container">
+        <div id="container" class="container" >
             <!-- nav bar  -->
-            <nav id="nav" class="w-full shadow-2xl relative"> </nav>
+            <nav id="nav" class=" shadow-2xl relative"> </nav>
 
             <!-- main bar -->
-            <div id="home" class="main flex  h-[85vh]"> 
+            <div id="home" onclick="removeMenu()" class="main flex h-[85vh]"> 
                 
             </div>
 
             <div class="w-[90%] h-0.5 bg-black relative m-auto"></div>
 
             <!-- about -->
-            <div id="about" class="pt-10 "></div>
+            <div id="about" onclick="removeMenu()" class="pt-10 "></div>
 
             <div class="w-[90%] h-0.5 bg-black relative m-auto mt-5"></div>
 
             <!-- skill -->
-            <div id="skill" class="pt-10 "></div>
+            <div id="skill" onclick="removeMenu()" class="pt-10 "></div>
 
             <div class="w-[90%] h-0.5 bg-black relative m-auto mt-5"></div>
 
             <!-- contact -->
-            <div id="contact" class="pt-10"></div>
+            <div id="contact" onclick="removeMenu()" class="pt-10"></div>
 
-            <div id="footer"></div>
+            <div id="footer" onclick="removeMenu()"></div>
         </div>
         <script src="./scripts/navScript.js"></script>
         <script src="./scripts/hameScript.js"></script>

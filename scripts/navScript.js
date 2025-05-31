@@ -16,7 +16,7 @@ function ravi_img() {
 async function init() {
 
     await loadHtml("nav", "nav.html");
-    // await loadHtml("manuItems", "manuItems.html");
+    await loadHtml("menuItems", "menuItems.html");
     await loadHtml("home", "home.html");
     await loadHtml("about", "about.html");
     await loadHtml("skill", "skill.html");
@@ -52,32 +52,47 @@ async function init() {
     setInterval(update_word, 4000);
 
     ravi_img()
+
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        const response = await fetch("https://script.google.com/macros/s/AKfycbw9a3wnjerXjkqKbv0_7rifJJJFKOAB1mMGxMO5aIarc7cAIBloy728aZn3TyJeZTcM/exec", {
+            method: "POST",
+            body: formData,
+        });
+
+        const result = await response.json();
+        document.getElementById("response").innerText = result.status === "success"
+            ? "Message sent successfully!"
+            : "Failed to send message.";
+        form.reset();
+    });
+
+    // menu btn
+    const menuBtn = document.querySelector("#menuIcon");
+
+    menuBtn.addEventListener("click", () => {
+        document.querySelector("#menuItems").classList.remove('hidden');
+        document.querySelector("#menuItems").classList.add('block');
+    })
+
+    
 }
 
 init()
 
-// scroll into view 
+function removeMenu() {
+        document.querySelector("#menuItems").classList.remove('block');
+        document.querySelector("#menuItems").classList.add('hidden');
+    }
 
-const scrollbtn = (id) => {
-    document.getElementById(id).scrollIntoView({
-        behavior: 'smooth',
-    })
-}
 
-const form = document.getElementById("contact-form");
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-      const formData = new FormData(form);
-
-    const response = await fetch("https://script.google.com/macros/s/AKfycbw9a3wnjerXjkqKbv0_7rifJJJFKOAB1mMGxMO5aIarc7cAIBloy728aZn3TyJeZTcM/exec", {
-        method: "POST",
-        body: formData,
-    });
-
-    const result = await response.json();
-    document.getElementById("response").innerText = result.status === "success"
-        ? "Message sent successfully!"
-        : "Failed to send message.";
-    // form.reset();
-});
+// scroll content
+    const scrollbtn = (id) => {
+        document.getElementById(id).scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
